@@ -6,7 +6,7 @@ int main(){
     AdjList alldep, sumdep, perdep, allarr, sumarr, perarr;
     //AdjList all, sum, per;
     ifstream myFile;
-    myFile.open("tempdelays.csv");
+    myFile.open("cleanflights.csv");
     string from, to, cancel, line, ignore, departure, arrival;
     int cancelled = 0, depdelay = 0, arrdelay = 0;
     while(myFile.good()){
@@ -42,7 +42,7 @@ int main(){
     //per.perFlights(sum);
     perdep.perFlights(sumdep);
     perarr.perFlights(sumarr);
-    perarr.printGraph();
+    //perarr.printGraph();
     //per contains all our cancellation percentages in decimal format
     //perdep contains all our departure delay averages
     //perarr contains all our arrival delay averages
